@@ -25,6 +25,20 @@ class: center, middle, inverse, title-slide
 * **Multivariable Regression Model:** Extended to variables `am`, `wt`, and `qsec`.
 * **Model Equation:** `fit_final &lt;- lm(mpg ~ am + wt + qsec, data = mtcars)`
 
+
+``` r
+base_fit &lt;- lm(mpg ~ am + wt + qsec, data = mtcars)
+summary(base_fit)$coefficients
+```
+
+```
+##              Estimate Std. Error   t value     Pr(&gt;|t|)
+## (Intercept)  9.617781  6.9595930  1.381946 1.779152e-01
+## am           2.935837  1.4109045  2.080819 4.671551e-02
+## wt          -3.916504  0.7112016 -5.506882 6.952711e-06
+## qsec         1.225886  0.2886696  4.246676 2.161737e-04
+```
+
 ### Interactive Features Built-In
 * **Drop-downs:** Select `am`, `wt`, and `qsec` correlations with `mpg`.
 * **Summary Table:** Real-time display of the final model coefficients.
